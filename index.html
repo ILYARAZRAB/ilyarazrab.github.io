@@ -1,35 +1,184 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Ocean Site</title>
-
-<script src="https://cdn.tailwindcss.com"></script>
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ocean Site</title>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
+<body class="bg-slate-950 text-white">
 
-<body class="bg-gray-100">
+  <!-- HEADER -->
+  <header class="fixed top-0 left-0 w-full z-50 bg-black/20 backdrop-blur-md border-b border-white/10">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      <div class="text-2xl font-bold tracking-wide">Ocean</div>
 
-<header class="p-6 bg-white shadow">
-<div class="max-w-6xl mx-auto flex justify-between">
-<h1 class="text-xl font-bold">Ocean</h1>
-<nav>
-<a href="#" class="mr-4">Главная</a>
-<a href="#" class="mr-4">Услуги</a>
-<a href="#">Контакты</a>
-</nav>
-</div>
-</header>
+      <nav class="hidden md:flex gap-8 text-sm text-white/90">
+        <a href="#about" class="hover:text-cyan-300 transition">О проекте</a>
+        <a href="#features" class="hover:text-cyan-300 transition">Преимущества</a>
+        <a href="#contact" class="hover:text-cyan-300 transition">Контакты</a>
+      </nav>
 
-<section class="text-center py-32 bg-blue-600 text-white">
-<h2 class="text-5xl font-bold mb-6">Ocean Project</h2>
-<p class="text-xl mb-8">Красивый сайт почти бесплатно</p>
-<button class="bg-white text-blue-600 px-6 py-3 rounded-lg">
-Начать
-</button>
-</section>
+      <a href="#contact" class="hidden md:inline-block bg-cyan-400 text-slate-950 font-semibold px-5 py-2 rounded-full hover:scale-105 transition">
+        Связаться
+      </a>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <!-- фон -->
+    <div
+      class="absolute inset-0 bg-cover bg-center"
+      style="background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1800&q=80');">
+    </div>
+
+    <!-- затемнение -->
+    <div class="absolute inset-0 bg-gradient-to-b from-slate-950/70 via-blue-950/50 to-slate-950"></div>
+
+    <!-- декоративные круги -->
+    <div class="absolute top-24 left-10 w-72 h-72 bg-cyan-400/20 blur-3xl rounded-full"></div>
+    <div class="absolute bottom-16 right-10 w-80 h-80 bg-blue-500/20 blur-3xl rounded-full"></div>
+
+    <div class="relative z-10 max-w-5xl mx-auto px-6 text-center">
+      <p class="uppercase tracking-[0.35em] text-cyan-300/90 text-sm mb-6">
+        Ocean background project
+      </p>
+
+      <h1 class="text-5xl md:text-7xl font-extrabold leading-tight mb-6">
+        Погружение
+        <span class="block text-cyan-300">в цифровой океан</span>
+      </h1>
+
+      <p class="max-w-2xl mx-auto text-lg md:text-xl text-white/80 mb-10">
+        Современный лендинг с атмосферой глубины, света и движения.
+        Красиво, быстро и почти бесплатно.
+      </p>
+
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="#features" class="bg-cyan-400 text-slate-950 font-semibold px-8 py-4 rounded-full hover:scale-105 transition">
+          Смотреть блоки
+        </a>
+        <a href="#contact" class="border border-white/30 px-8 py-4 rounded-full hover:bg-white/10 transition">
+          Оставить заявку
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="py-24 bg-slate-950">
+    <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+      <div>
+        <p class="text-cyan-300 uppercase tracking-[0.3em] text-sm mb-4">О проекте</p>
+        <h2 class="text-4xl md:text-5xl font-bold mb-6">
+          Атмосфера океана в каждом экране
+        </h2>
+        <p class="text-white/75 text-lg leading-8 mb-6">
+          Этот сайт построен как легкий современный лендинг: большой визуальный первый экран,
+          чистая типографика, прозрачные блоки и акцент на эмоции.
+        </p>
+        <p class="text-white/65 leading-8">
+          Такой стиль хорошо подходит для творческих проектов, студий, портфолио, брендов,
+          digital-услуг и презентационных страниц.
+        </p>
+      </div>
+
+      <div class="bg-white/5 border border-white/10 rounded-3xl p-8 shadow-2xl backdrop-blur-sm">
+        <div class="grid grid-cols-2 gap-6">
+          <div class="bg-white/5 rounded-2xl p-6">
+            <div class="text-3xl font-bold text-cyan-300 mb-2">01</div>
+            <p class="text-white/75">Глубокий визуальный стиль</p>
+          </div>
+          <div class="bg-white/5 rounded-2xl p-6">
+            <div class="text-3xl font-bold text-cyan-300 mb-2">02</div>
+            <p class="text-white/75">Быстрая загрузка</p>
+          </div>
+          <div class="bg-white/5 rounded-2xl p-6">
+            <div class="text-3xl font-bold text-cyan-300 mb-2">03</div>
+            <p class="text-white/75">Адаптивный дизайн</p>
+          </div>
+          <div class="bg-white/5 rounded-2xl p-6">
+            <div class="text-3xl font-bold text-cyan-300 mb-2">04</div>
+            <p class="text-white/75">Бесплатный хостинг</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section id="features" class="py-24 bg-gradient-to-b from-slate-950 to-blue-950/60">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center mb-14">
+        <p class="text-cyan-300 uppercase tracking-[0.3em] text-sm mb-4">Преимущества</p>
+        <h2 class="text-4xl md:text-5xl font-bold">Что делает сайт сильнее</h2>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-white/5 border border-white/10 rounded-3xl p-8 hover:-translate-y-2 transition">
+          <h3 class="text-2xl font-semibold mb-4">Визуал</h3>
+          <p class="text-white/70 leading-7">
+            Большой фон, акцентный свет, прозрачные карточки и современная подача.
+          </p>
+        </div>
+
+        <div class="bg-white/5 border border-white/10 rounded-3xl p-8 hover:-translate-y-2 transition">
+          <h3 class="text-2xl font-semibold mb-4">Простота</h3>
+          <p class="text-white/70 leading-7">
+            Всё работает на одном HTML-файле, без сложного сервера и лишних затрат.
+          </p>
+        </div>
+
+        <div class="bg-white/5 border border-white/10 rounded-3xl p-8 hover:-translate-y-2 transition">
+          <h3 class="text-2xl font-semibold mb-4">Готовность</h3>
+          <p class="text-white/70 leading-7">
+            Такой шаблон можно быстро доработать под продажи, портфолио или бренд.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="py-24 bg-slate-950">
+    <div class="max-w-3xl mx-auto px-6 text-center">
+      <p class="text-cyan-300 uppercase tracking-[0.3em] text-sm mb-4">Контакты</p>
+      <h2 class="text-4xl md:text-5xl font-bold mb-6">Готовы запустить сайт</h2>
+      <p class="text-white/70 text-lg mb-10">
+        Следующий шаг — адаптировать этот экран под твой реальный макет и добавить остальные блоки.
+      </p>
+
+      <div class="bg-white/5 border border-white/10 rounded-3xl p-8">
+        <form class="grid gap-4">
+          <input
+            type="text"
+            placeholder="Ваше имя"
+            class="w-full rounded-2xl bg-white/10 border border-white/10 px-5 py-4 text-white placeholder-white/40 outline-none"
+          />
+          <input
+            type="email"
+            placeholder="Ваш email"
+            class="w-full rounded-2xl bg-white/10 border border-white/10 px-5 py-4 text-white placeholder-white/40 outline-none"
+          />
+          <textarea
+            placeholder="Ваше сообщение"
+            rows="5"
+            class="w-full rounded-2xl bg-white/10 border border-white/10 px-5 py-4 text-white placeholder-white/40 outline-none"
+          ></textarea>
+          <button
+            type="button"
+            class="bg-cyan-400 text-slate-950 font-semibold px-8 py-4 rounded-full hover:scale-105 transition">
+            Отправить
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer class="border-t border-white/10 bg-slate-950 py-8 text-center text-white/50">
+    © 2026 Ocean Site
+  </footer>
 
 </body>
 </html>
